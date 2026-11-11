@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 14 - DOM Mini Applications</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>JavaScript DOM Playground</h1>
+        <p>Learn DOM by building interactive mini applications</p>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. Greeter App -->
+        <section class="app-card">
+            <h2>1. Greeting App</h2>
+            <p>Enter your name to receive a greeting.</p>
+
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="greetBtn">Greet Me</button>
+
+            <h3 id="greetingOutput">Hello! Welcome.</h3>
+        </section>
+
+        <!-- 2. Counter App -->
+        <section class="app-card">
+            <h2>2. Counter App</h2>
+            <p class="counter-number" id="count">0</p>
+
+            <div class="button-group">
+                <button id="decreaseBtn">Decrease</button>
+                <button id="resetBtn">Reset</button>
+                <button id="increaseBtn">Increase</button>
+            </div>
+        </section>
+
+        <!-- 3. Color and Theme Changer -->
+        <section class="app-card" id="themeCard">
+            <h2>3. Color & Theme Changer</h2>
+            <p>Change the background color or switch theme.</p>
+
+            <div class="button-group">
+                <button class="color-btn" data-color="#e0f2fe">Blue</button>
+                <button class="color-btn" data-color="#dcfce7">Green</button>
+                <button class="color-btn" data-color="#fce7f3">Pink</button>
+            </div>
+
+            <button id="themeToggle">Toggle Dark Mode</button>
+        </section>
+
+        <!-- 4. Todo List App -->
+        <section class="app-card">
+            <h2>4. Todo List</h2>
+            <p>Add your daily tasks and manage them.</p>
+
+            <div class="todo-input">
+                <input type="text" id="todoInput" placeholder="Enter a task">
+                <button id="addTodoBtn">Add Task</button>
+            </div>
+
+            <div class="todo-stats">
+                <span>Total: <strong id="totalCount">0</strong></span>
+                <span>Completed: <strong id="completedCount">0</strong></span>
+                <span>Pending: <strong id="pendingCount">0</strong></span>
+            </div>
+
+            <ul id="todoList"></ul>
+
+            <button id="clearCompletedBtn">Clear Completed</button>
+        </section>
+
+        <!-- 5. Family Tree Explorer -->
+        <section class="app-card">
+            <h2>5. Family Tree Explorer</h2>
+            <p>Click a family member to explore information.</p>
+
+            <div class="family-tree">
+                <button class="family-member" data-name="Grandfather"
+                    data-info="The head of our family.">
+                    Grandfather
+                </button>
+
+                <div class="family-children">
+                    <button class="family-member" data-name="Father"
+                        data-info="He is the father of the family.">
+                        Father
+                    </button>
+
+                    <button class="family-member" data-name="Mother"
+                        data-info="She is the mother of the family.">
+                        Mother
+                    </button>
+                </div>
+
+                <div class="family-children">
+                    <button class="family-member" data-name="Brother"
+                        data-info="He is a member of the next generation.">
+                        Brother
+                    </button>
+
+                    <button class="family-member" data-name="Sister"
+                        data-info="She is a member of the next generation.">
+                        Sister
+                    </button>
+                </div>
+            </div>
+
+            <div id="familyInfo" class="family-info">
+                Select a family member to see details.
+            </div>
+        </section>
+
+        <!-- DOM Learning Guide -->
+        <section class="app-card guide-card">
+            <h2>6. Beginner DOM Guide</h2>
+
+            <h3>What is DOM?</h3>
+            <p>
+                DOM stands for Document Object Model.
+                It allows JavaScript to access and modify HTML elements.
+            </p>
+
+            <h3>1. Selecting Elements</h3>
+            <pre><code>document.getElementById("myElement");
+document.querySelector(".myClass");</code></pre>
+
+            <h3>2. Handling Events</h3>
+            <pre><code>button.addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+
+            <h3>3. Updating Content</h3>
+            <pre><code>document.getElementById("demo").textContent =
+    "Hello JavaScript!";</code></pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Class 14 Assignment | JavaScript DOM Practice</p>
+    </footer>
+
+</body>
+</html>
